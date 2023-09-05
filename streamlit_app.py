@@ -18,7 +18,7 @@ st.set_page_config(
 
 with st.sidebar:
     cols = st.columns([1,2])
-    shapes = ['note', 'egg', 'star', 'house', 'box']
+    shapes = ['box', 'egg', 'star', 'house', 'note']
     with cols[0]:
         shape = st.selectbox("节点外形:", shapes)
     with cols[1]:

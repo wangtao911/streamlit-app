@@ -3,7 +3,7 @@ import streamlit as st
 import datetime
 import pandas as pd
 import numpy as np
-# import graphviz
+import graphviz
 st.set_page_config(
     page_title="源目绘图 v1",
     page_icon='❇️',

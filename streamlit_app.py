@@ -70,6 +70,22 @@ for e in wuliu_df['end']:
 for c in wuliu_df['comm']:
     c_list.append(c)
 
+max = (max(len(start_loc_edited_df),len(end_loc_df_edited_df),len(comm_edited_df)))
+if len(s_list) < max :
+    i = max - len(s_list)
+    for n in range(i):
+        s_list.append('空-起始')
+
+if len(e_list) < max :
+    i = max - len(e_list)
+    for n in range(i):
+        e_list.append('空-目的')
+
+if len(c_list) < max :
+    i = max - len(c_list)
+    for n in range(i):
+        c_list.append('')
+
 #graphviz.set_default_engine()
 graph = graphviz.Digraph()
 graph.node_attr['shape'] = shape

@@ -2,3 +2,7 @@ streamlit
 pandas
 numpy
 graphviz
+plotly
+streamlit_tags
+streamlit_agraph
+pygraphviz 

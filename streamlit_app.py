@@ -20,10 +20,10 @@ with st.sidebar:
     cols = st.columns([1,2])
     shapes = ['box', 'egg', 'star', 'house', 'note']
     with cols[0]:
-        shape = st.selectbox("节点外形:", shapes)
+        st.text('多节点关系图')
     with cols[1]:
         #dpi = st.slider("清晰度:", 10, 600, 200, 10)
-
+        shape = st.selectbox("节点外形:", shapes)
     col1, col2,col3 = st.columns([2,2,2])
     with col1:
         start_loc_df = pd.DataFrame(

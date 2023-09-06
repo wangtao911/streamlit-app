@@ -22,7 +22,7 @@ with st.sidebar:
     with cols[0]:
         shape = st.selectbox("节点外形:", shapes)
     with cols[1]:
-        dpi = st.slider("清晰度:", 10, 600, 200, 10)
+        #dpi = st.slider("清晰度:", 10, 600, 200, 10)
 
     col1, col2,col3 = st.columns([2,2,2])
     with col1:

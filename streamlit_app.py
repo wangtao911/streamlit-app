@@ -28,8 +28,8 @@ with st.sidebar:
     with col1:
         start_loc_df = pd.DataFrame(
             [
-                {'提货地址':'A地址'},
-                {'提货地址':'B地址'},
+                {'起点':'A site'},
+                {'起点':'B site'},
             ]
         )
         start_loc_edited_df = st.data_editor(start_loc_df,key="star",
@@ -37,8 +37,8 @@ with st.sidebar:
     with col2:
         end_loc_df = pd.DataFrame(
             [
-                {'目的地址':'B地址'},
-                {'目的地址':'A地址'},
+                {'终点':'B site'},
+                {'终点':'C site'},
             ]
         )
         end_loc_df_edited_df = st.data_editor(end_loc_df,key="end",
@@ -46,16 +46,16 @@ with st.sidebar:
     with col3:
         comm_df = pd.DataFrame(
             [
-                {'备注':'原因aaa'},
-                {'备注':'原因bbb'},
+                {'备注':'aaa'},
+                {'备注':'4456'},
             ]
         )
         comm_edited_df = st.data_editor(comm_df,key="comm",
             num_rows="dynamic")
 
 wuliu_df = pd.DataFrame()
-wuliu_df['start'] = start_loc_edited_df['提货地址']
-wuliu_df['end']   = end_loc_df_edited_df['目的地址']
+wuliu_df['start'] = start_loc_edited_df['起点']
+wuliu_df['end']   = end_loc_df_edited_df['终点']
 wuliu_df['comm']  = comm_edited_df['备注']
 #wuliu_df['flow'] = wuliu_df['start']+"->"+wuliu_df['end']
 #st.dataframe(wuliu_df)
@@ -64,11 +64,11 @@ s_list=[]
 e_list=[]
 c_list=[]
 for s in wuliu_df['start']:
-    s_list.append(s)
+    s_list.append(str(s))
 for e in wuliu_df['end']:
-    e_list.append(e)
+    e_list.append(str(e))
 for c in wuliu_df['comm']:
-    c_list.append(c)
+    c_list.append(str(c))
 
 max = (max(len(start_loc_edited_df),len(end_loc_df_edited_df),len(comm_edited_df)))
 if len(s_list) < max :
